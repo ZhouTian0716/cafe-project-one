@@ -1,0 +1,29 @@
+$color-one: hsl(0, 0%, 11%);
+$color-two: hsl(0, 0%, 100%);
+
+$colors-light: (
+  one: $color-two,
+  two: $color-one,
+);
+
+$colors-dark: (
+  one: $color-one,
+  two: $color-two,
+);
+
+[color-scheme="light"] {
+  @each $name, $color in $colors-light {
+    --color-#{$name}: #{$color};
+  }
+}
+
+[color-scheme="dark"] {
+  @each $name, $color in $colors-dark {
+    --color-#{$name}: #{$color};
+  }
+}
+
+//creating a function to get color instead of using css varible
+@function getColor($color-name) {
+  @return var(--color-#{$color-name});
+}

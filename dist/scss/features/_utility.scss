@@ -1,0 +1,25 @@
+@use "../variables/" as *;
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.btn__one {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid getColor(one);
+  border-radius: 3px;
+  transition: all 100ms ease-in-out;
+  font-family: getFont(a);
+  color: getColor(two);
+  cursor: pointer;
+  &:hover {
+    color: getColor(one);
+    background-color: getColor(two);
+  }
+}

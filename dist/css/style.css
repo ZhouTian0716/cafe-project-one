@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@200;300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+:root {
+  --font-a: Open Sans, sans-serif;
+  --font-b: Bitter, sans-serif;
+  --font-c: Montserrat, sans-serif;
+}
+
+[color-scheme=light] {
+  --color-one: hsl(0deg, 0%, 100%);
+  --color-two: hsl(0deg, 0%, 11%);
+}
+
+[color-scheme=dark] {
+  --color-one: hsl(0deg, 0%, 11%);
+  --color-two: hsl(0deg, 0%, 100%);
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.btn__one {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-one);
+  border-radius: 3px;
+  transition: all 100ms ease-in-out;
+  font-family: var(--font-a);
+  color: var(--color-two);
+  cursor: pointer;
+}
+.btn__one:hover {
+  color: var(--color-one);
+  background-color: var(--color-two);
+}/*# sourceMappingURL=style.css.map */
