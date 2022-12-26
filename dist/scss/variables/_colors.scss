@@ -1,5 +1,5 @@
-$light-tp: rgba(255, 255, 255, 0.1);
-$dark-tp: rgba(0, 0, 0, 0.1);
+$light-tp: rgba(255, 255, 255, 0.3);
+$dark-tp: rgba(0, 0, 0, 0.3);
 
 //https://tailwindcolor.com/
 //yellow as primary
@@ -50,7 +50,7 @@ $purple-100: rgb(243, 232, 255);
 $purple-50: rgb(250, 245, 255);
 
 $colors-light: (
-  bg-contrast: $dark-tp,
+  bg-contrast: $light-tp,
   text-primary-50: $yellow-50,
   text-primary-100: $yellow-100,
   text-primary-200: $yellow-200,
@@ -94,7 +94,7 @@ $colors-light: (
 );
 
 $colors-dark: (
-  bg-contrast: $light-tp,
+  bg-contrast: $dark-tp,
   text-primary-50: $warm-gray-900,
   text-primary-100: $warm-gray-800,
   text-primary-200: $warm-gray-700,

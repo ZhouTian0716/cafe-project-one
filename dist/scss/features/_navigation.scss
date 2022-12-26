@@ -6,19 +6,27 @@
   border-radius: 50%;
 }
 
-header {
+#navigation {
   position: fixed;
   top: 0;
   left: 0;
+  background: getColor(bg-contrast);
   width: 100%;
   z-index: 1;
-  
+  transition: all 300ms ease-in-out;
+  &.scroll-down {
+    transform: translateY(-100%);
+  }
+  &.scroll-up {
+    filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+  }
+
   nav {
     padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
     ul {
       list-style: none;
       display: flex;

@@ -29,7 +29,7 @@ button {
     transition: all $transition-time;
   }
   &__knob {
-    $size: $width/2;
+    $size: calc($width / 2);
     background: getColor(bg-primary-400);
     display: flex;
     align-items: center;
@@ -38,7 +38,7 @@ button {
     height: $size;
     border-radius: 50%;
     position: relative;
-    top: -#{$spacing-unit/2};
+    top: -#{calc($spacing-unit / 2)};
     transition: transform $transition-time, background $transition-time;
   }
   &__icon {
@@ -63,7 +63,7 @@ button {
   }
   &--active {
     .c-theme__knob {
-      transform: translateX($width/2);
+      transform: translateX(calc($width / 2));
     }
     .c-theme__icon-wrapper {
       &--light {

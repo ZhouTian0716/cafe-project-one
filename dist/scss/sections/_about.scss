@@ -2,19 +2,34 @@
 
 #about {
   width: 100%;
+  padding: 1rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(12, 1fr);
   // grid-template-rows: 1fr 0.5fr;
   grid-template-areas:
-    "des img1 img2"
-    "img3 img4 img5";
+    "des des des des des des img1 img1 img1 img2 img2 img2"
+    "img3 img3 img3 img3 img4 img4 img4 img4 img5 img5 img5 img5";
   gap: 2rem;
   .description {
     grid-area: des;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   @for $i from 1 through 5 {
-    img:nth-child(#{$i}) {
+    .about__img:nth-child(#{$i + 1}) {
+      height: 400px;
+      background-size: cover;
+
+      background-image: url("../assets/img/food/#{$i}.jpeg");
       grid-area: img#{$i};
+      &.horizontal {
+        height: 200px;
+        background-size: contain;
+        background-position: bottom;
+        background-attachment: fixed;
+      }
     }
   }
 }
@@ -30,7 +45,7 @@
 //   }
 // }
 
-@include media-tablet-sm {
+@include media-tablet-lg {
   #about {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:

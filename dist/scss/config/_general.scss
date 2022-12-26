@@ -22,6 +22,10 @@
 
 
 body{
+  width: 100vw;
+  min-height: 100vh;
+  font-family: getFont(a);
   background-color: getColor(bg-primary-50);
   color: getColor(text-primary-900);
+  overflow-x: hidden;
 }
