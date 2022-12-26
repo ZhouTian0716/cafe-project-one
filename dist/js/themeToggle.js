@@ -51,7 +51,6 @@ themeBtn.addEventListener("click", () => {
   } else {
     theme = "dark";
   }
-
   localStorage.setItem("theme", `${theme}`);
   loadTheme(theme);
 });

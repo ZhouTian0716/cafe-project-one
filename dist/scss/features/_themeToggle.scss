@@ -3,95 +3,80 @@
 $spacing-unit: 0.5rem;
 $transition-time: 200ms;
 
-
 button {
-	&:focus,
-	&:active {
-		outline: none;
-	}
+  &:focus,
+  &:active {
+    outline: none;
+  }
 }
 
 .c-theme {
-	$width: $spacing-unit * 6;
-	background: transparent;
-	cursor: pointer;
-	width: $width;
-	position: relative;
-	padding: 0;
-	transition: all $transition-time;
-	&__track {
-		background: getColor(one);
-		height: $spacing-unit * 2;
-		width: 100%;
-		border-radius: 9999px;
-		position: absolute;
-		right: 0;
-		left: 0;
-		transition: all $transition-time;
-	}
-	&__knob {
-		$size: $width/2;
-		background: yellow;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: $size;
-		height: $size;
-		border-radius: 50%;
-		position: relative;
-		box-shadow: green,
-			0 $spacing-unit/4 $spacing-unit/2 0 var(--shadow-ambientColor);
-		top: -#{$spacing-unit/2};
-		transition: transform $transition-time, background $transition-time;
-	}
-	&__icon {
-		$size: $spacing-unit * 2;
-		fill: red;
-		width: $size;
-		height: $size;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-	&__icon-wrapper {
-		position: relative;
-		transition: transform $transition-time;
-		&--light {
-			color: var(--yellow200);
-			transform: scaleX(1) scaleY(1) rotate(0deg);
-		}
-		&--dark {
-			color: var(--blue300);
-			transform: scaleX(0) scaleY(0) rotate(90deg);
-		}
-	}
-	&--active {
-		.c-theme__track {
-			background: getColor(one);
-		}
-		.c-theme__knob {
-			transform: translateX($width/2);
-			box-shadow: 0 0 0 1px var(--blue200);
-		}
-		.c-theme__icon-wrapper {
-			&--light {
-				color: red;
-				transform: scaleX(0) scaleY(0) rotate(90deg);
-			}
-			&--dark {
-				color: var(--blue300);
-				transform: scaleX(1) scaleY(1) rotate(0deg);
-			}
-		}
-	}
-	&--is-animating {
-		.c-theme__icon-wrapper {
-			transform: scaleX(0) scaleY(0) rotate(-90deg);
-		}
-	}
+  $width: $spacing-unit * 6;
+  background: transparent;
+  cursor: pointer;
+  width: $width;
+  position: relative;
+  padding: 0;
+  transition: all $transition-time;
+  &__track {
+    background: getColor(bg-secondary-200);
+    height: $spacing-unit * 2;
+    width: 100%;
+    border-radius: 9999px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    transition: all $transition-time;
+  }
+  &__knob {
+    $size: $width/2;
+    background: getColor(bg-primary-400);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    position: relative;
+    top: -#{$spacing-unit/2};
+    transition: transform $transition-time, background $transition-time;
+  }
+  &__icon {
+    $size: $spacing-unit * 2;
+    fill: getColor(text-primary-300);
+    width: $size;
+    height: $size;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__icon-wrapper {
+    position: relative;
+    transition: transform $transition-time;
+    &--light {
+      transform: scaleX(1) scaleY(1) rotate(0deg);
+    }
+    &--dark {
+      transform: scaleX(0) scaleY(0) rotate(90deg);
+    }
+  }
+  &--active {
+    .c-theme__knob {
+      transform: translateX($width/2);
+    }
+    .c-theme__icon-wrapper {
+      &--light {
+        transform: scaleX(0) scaleY(0) rotate(90deg);
+      }
+      &--dark {
+        transform: scaleX(1) scaleY(1) rotate(0deg);
+      }
+    }
+  }
+  &--is-animating {
+    .c-theme__icon-wrapper {
+      transform: scaleX(0) scaleY(0) rotate(-90deg);
+    }
+  }
 }
-
-
-
-

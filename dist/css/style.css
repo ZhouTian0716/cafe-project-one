@@ -31,14 +31,110 @@ html {
 
 [color-scheme=light] {
   --color-bg-contrast: rgba(0, 0, 0, 0.1);
-  --color-one: hsl(0deg, 0%, 100%);
-  --color-two: hsl(0deg, 0%, 11%);
+  --color-text-primary-50: rgb(254, 252, 232);
+  --color-text-primary-100: rgb(254, 249, 195);
+  --color-text-primary-200: rgb(254, 240, 138);
+  --color-text-primary-300: rgb(253, 224, 71);
+  --color-text-primary-400: rgb(250, 204, 21);
+  --color-text-primary-500: rgb(234, 179, 8);
+  --color-text-primary-600: rgb(202, 138, 4);
+  --color-text-primary-700: rgb(161, 98, 7);
+  --color-text-primary-800: rgb(133, 77, 14);
+  --color-text-primary-900: rgb(113, 63, 18);
+  --color-text-secondary-50: rgb(240, 253, 250);
+  --color-text-secondary-100: rgb(204, 251, 241);
+  --color-text-secondary-200: rgb(153, 246, 228);
+  --color-text-secondary-300: rgb(94, 234, 212);
+  --color-text-secondary-400: rgb(45, 212, 191);
+  --color-text-secondary-500: rgb(20, 184, 166);
+  --color-text-secondary-600: rgb(13, 148, 136);
+  --color-text-secondary-700: rgb(15, 118, 110);
+  --color-text-secondary-800: rgb(17, 94, 89);
+  --color-text-secondary-900: rgb(19, 78, 74);
+  --color-bg-primary-900: rgb(28, 25, 23);
+  --color-bg-primary-800: rgb(41, 37, 36);
+  --color-bg-primary-700: rgb(68, 64, 60);
+  --color-bg-primary-600: rgb(87, 83, 78);
+  --color-bg-primary-500: rgb(120, 113, 108);
+  --color-bg-primary-400: rgb(168, 162, 158);
+  --color-bg-primary-300: rgb(214, 211, 209);
+  --color-bg-primary-200: rgb(231, 229, 228);
+  --color-bg-primary-100: rgb(245, 245, 244);
+  --color-bg-primary-50: rgb(250, 250, 249);
+  --color-bg-secondary-900: rgb(88, 28, 135);
+  --color-bg-secondary-800: rgb(107, 33, 168);
+  --color-bg-secondary-700: rgb(126, 34, 206);
+  --color-bg-secondary-600: rgb(147, 51, 234);
+  --color-bg-secondary-500: rgb(168, 85, 247);
+  --color-bg-secondary-400: rgb(192, 132, 252);
+  --color-bg-secondary-300: rgb(216, 180, 254);
+  --color-bg-secondary-200: rgb(233, 213, 255);
+  --color-bg-secondary-100: rgb(243, 232, 255);
+  --color-bg-secondary-50: rgb(250, 245, 255);
 }
 
 [color-scheme=dark] {
   --color-bg-contrast: rgba(255, 255, 255, 0.1);
-  --color-one: hsl(0deg, 0%, 11%);
-  --color-two: hsl(0deg, 0%, 100%);
+  --color-text-primary-50: rgb(113, 63, 18);
+  --color-text-primary-100: rgb(133, 77, 14);
+  --color-text-primary-200: rgb(161, 98, 7);
+  --color-text-primary-300: rgb(202, 138, 4);
+  --color-text-primary-400: rgb(234, 179, 8);
+  --color-text-primary-500: rgb(250, 204, 21);
+  --color-text-primary-600: rgb(253, 224, 71);
+  --color-text-primary-700: rgb(254, 240, 138);
+  --color-text-primary-800: rgb(254, 249, 195);
+  --color-text-primary-900: rgb(254, 252, 232);
+  --color-text-secondary-50: rgb(19, 78, 74);
+  --color-text-secondary-100: rgb(17, 94, 89);
+  --color-text-secondary-200: rgb(15, 118, 110);
+  --color-text-secondary-300: rgb(13, 148, 136);
+  --color-text-secondary-400: rgb(20, 184, 166);
+  --color-text-secondary-500: rgb(45, 212, 191);
+  --color-text-secondary-600: rgb(94, 234, 212);
+  --color-text-secondary-700: rgb(153, 246, 228);
+  --color-text-secondary-800: rgb(204, 251, 241);
+  --color-text-secondary-900: rgb(240, 253, 250);
+  --color-bg-primary-900: rgb(250, 250, 249);
+  --color-bg-primary-800: rgb(245, 245, 244);
+  --color-bg-primary-700: rgb(231, 229, 228);
+  --color-bg-primary-600: rgb(214, 211, 209);
+  --color-bg-primary-500: rgb(168, 162, 158);
+  --color-bg-primary-400: rgb(120, 113, 108);
+  --color-bg-primary-300: rgb(87, 83, 78);
+  --color-bg-primary-200: rgb(68, 64, 60);
+  --color-bg-primary-100: rgb(41, 37, 36);
+  --color-bg-primary-50: rgb(28, 25, 23);
+  --color-bg-secondary-900: rgb(250, 245, 255);
+  --color-bg-secondary-800: rgb(243, 232, 255);
+  --color-bg-secondary-700: rgb(233, 213, 255);
+  --color-bg-secondary-600: rgb(216, 180, 254);
+  --color-bg-secondary-500: rgb(192, 132, 252);
+  --color-bg-secondary-400: rgb(168, 85, 247);
+  --color-bg-secondary-300: rgb(147, 51, 234);
+  --color-bg-secondary-200: rgb(126, 34, 206);
+  --color-bg-secondary-100: rgb(107, 33, 168);
+  --color-bg-secondary-50: rgb(88, 28, 135);
+}
+
+* ::-webkit-scrollbar {
+  width: 5px;
+  padding: 1px;
+}
+* ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+* ::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2.5px;
+}
+* ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  background-color: var(--color-bg-primary-50);
+  color: var(--color-text-primary-900);
 }
 
 #logo {
@@ -59,7 +155,6 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--color-bg-contrast);
 }
 header nav ul {
   list-style: none;
@@ -81,7 +176,7 @@ button:focus, button:active {
   transition: all 200ms;
 }
 .c-theme__track {
-  background: var(--color-one);
+  background: var(--color-bg-secondary-200);
   height: 1rem;
   width: 100%;
   border-radius: 9999px;
@@ -91,7 +186,7 @@ button:focus, button:active {
   transition: all 200ms;
 }
 .c-theme__knob {
-  background: yellow;
+  background: var(--color-bg-primary-400);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,12 +194,11 @@ button:focus, button:active {
   height: 1.5rem;
   border-radius: 50%;
   position: relative;
-  box-shadow: green, 0 0.125rem 0.25rem 0 var(--shadow-ambientColor);
   top: -0.25rem;
   transition: transform 200ms, background 200ms;
 }
 .c-theme__icon {
-  fill: red;
+  fill: var(--color-text-primary-300);
   width: 1rem;
   height: 1rem;
   position: absolute;
@@ -117,26 +211,18 @@ button:focus, button:active {
   transition: transform 200ms;
 }
 .c-theme__icon-wrapper--light {
-  color: var(--yellow200);
   transform: scaleX(1) scaleY(1) rotate(0deg);
 }
 .c-theme__icon-wrapper--dark {
-  color: var(--blue300);
   transform: scaleX(0) scaleY(0) rotate(90deg);
-}
-.c-theme--active .c-theme__track {
-  background: var(--color-one);
 }
 .c-theme--active .c-theme__knob {
   transform: translateX(1.5rem);
-  box-shadow: 0 0 0 1px var(--blue200);
 }
 .c-theme--active .c-theme__icon-wrapper--light {
-  color: red;
   transform: scaleX(0) scaleY(0) rotate(90deg);
 }
 .c-theme--active .c-theme__icon-wrapper--dark {
-  color: var(--blue300);
   transform: scaleX(1) scaleY(1) rotate(0deg);
 }
 .c-theme--is-animating .c-theme__icon-wrapper {
@@ -173,7 +259,8 @@ button:focus, button:active {
   background-size: cover;
   background-position: center;
   background-image: url("../assets/img/1.jpeg");
-  background-color: var(--color-two);
+  background-color: var(--color-bg-contrast);
+  background-blend-mode: multiply;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
@@ -182,15 +269,11 @@ button:focus, button:active {
   gap: 2rem;
 }
 #home h1 {
-  color: red;
-  mix-blend-mode: difference;
   font-family: var(--font-a);
 }
 
 #about {
   width: 100%;
-  height: 100vh;
-  background-color: blue;
   display: flex;
   flex-direction: column;
   align-items: center;
