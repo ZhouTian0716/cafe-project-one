@@ -1,10 +1,12 @@
 @use "../variables" as *;
 
 footer {
+  --fz--one: 14px;
+  --fz--two: 12px;
   .footer__one {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
-    font-size: 14px;
+    font-size: var(--fz--one);
     padding: 1em;
     text-align: center;
     display: flex;
@@ -12,9 +14,9 @@ footer {
 
     justify-content: center;
     gap: 1em;
-    h2{
-        font-size: clamp(18px, 3vw, 24px);
-        text-transform: uppercase;
+    h2 {
+      font-size: clamp(18px, 3vw, 24px);
+      text-transform: uppercase;
     }
     .footer__flex__row {
       display: flex;
@@ -48,7 +50,7 @@ footer {
     }
   }
   .footer__two {
-    font-size: 12px;
+    font-size: var(--fz--two);
     padding: 1em;
     display: flex;
     flex-direction: column;
@@ -67,11 +69,10 @@ footer {
 
 @include media-mobile-lg {
   footer {
+    --fz--one: 12px;
+    --fz--two: 10px;
     .footer__one {
-      width: 90%;
-      .footer__flex__row {
-        flex-direction: column;
-      }
+      width: 95%;
     }
     .footer__two {
       ul {

@@ -140,6 +140,9 @@ body {
   color: var(--color-text-primary-900);
   overflow-x: hidden;
 }
+body main section {
+  margin-bottom: 3rem;
+}
 
 #logo {
   width: 50px;
@@ -376,18 +379,64 @@ button:focus, button:active {
     grid-template-areas: "des" "img1" "img2" "img3" "img4" "img5";
   }
 }
+[color-scheme=dark] #menu {
+  background-image: url("../assets/img/menu-bg-dark.png");
+}
+
+[color-scheme=light] #menu {
+  background-image: url("../assets/img/menu-bg-light.png");
+}
+
 #menu {
   width: 100%;
   height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-image: url("../assets/img/menu-bg.jpeg");
+  position: relative;
+  padding: 80px min(20px, 1vw);
+}
+#menu .menu__wave_top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+#menu .menu__wave_top svg {
+  position: relative;
+  display: block;
+  width: calc(122% + 1.3px);
+  height: 45px;
+}
+#menu .menu__wave_top svg .shape-fill {
+  fill: var(--color-bg-primary-50);
+}
+#menu .menu__wave_bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+#menu .menu__wave_bottom svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
+}
+#menu .menu__wave_bottom svg .shape-fill {
+  fill: var(--color-bg-primary-50);
 }
 
+footer {
+  --fz--one: 14px;
+  --fz--two: 12px;
+}
 footer .footer__one {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
-  font-size: 14px;
+  font-size: var(--fz--one);
   padding: 1em;
   text-align: center;
   display: flex;
@@ -429,7 +478,7 @@ footer .footer__one ul {
   list-style: none;
 }
 footer .footer__two {
-  font-size: 12px;
+  font-size: var(--fz--two);
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -446,11 +495,12 @@ footer .footer__two ul {
 }
 
 @media screen and (max-width: 450px) {
-  footer .footer__one {
-    width: 90%;
+  footer {
+    --fz--one: 12px;
+    --fz--two: 10px;
   }
-  footer .footer__one .footer__flex__row {
-    flex-direction: column;
+  footer .footer__one {
+    width: 95%;
   }
   footer .footer__two ul {
     flex-wrap: wrap;

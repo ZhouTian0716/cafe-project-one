@@ -28,4 +28,9 @@ body{
   background-color: getColor(bg-primary-50);
   color: getColor(text-primary-900);
   overflow-x: hidden;
+  main{
+    section{
+      margin-bottom: 3rem;
+    }
+  }
 }

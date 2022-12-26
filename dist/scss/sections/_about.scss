@@ -5,7 +5,6 @@
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  // grid-template-rows: 1fr 0.5fr;
   grid-template-areas:
     "des des des des des des img1 img1 img1 img2 img2 img2"
     "img3 img3 img3 img3 img4 img4 img4 img4 img5 img5 img5 img5";
@@ -29,21 +28,12 @@
         background-size: contain;
         background-position: bottom;
         background-attachment: fixed;
+        
       }
     }
   }
 }
 
-// @for $i from 1 through 6 {
-//   .fade_down:nth-child(#{$i}) {
-//     animation-name: fade_down;
-//     animation-duration: 300ms;
-//     animation-timing-function: ease-in-out;
-//     animation-delay: $i * 100ms - 100ms;
-//     animation-fill-mode: forwards;
-//     animation-iteration-count: 1;
-//   }
-// }
 
 @include media-tablet-lg {
   #about {

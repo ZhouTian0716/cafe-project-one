@@ -138,15 +138,18 @@ $colors-dark: (
 );
 
 [color-scheme="light"] {
+
   @each $name, $color in $colors-light {
     --color-#{$name}: #{$color};
   }
+ 
 }
 
 [color-scheme="dark"] {
   @each $name, $color in $colors-dark {
     --color-#{$name}: #{$color};
   }
+ 
 }
 
 //creating a function to get color instead of using css varible
