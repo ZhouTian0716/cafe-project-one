@@ -1,14 +1,54 @@
-
+@use "../variables" as *;
 
 #about {
-    width: 100%;
-  
-   
-    
-    
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap:2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  // grid-template-rows: 1fr 0.5fr;
+  grid-template-areas:
+    "des img1 img2"
+    "img3 img4 img5";
+  gap: 2rem;
+  .description {
+    grid-area: des;
   }
+  @for $i from 1 through 5 {
+    img:nth-child(#{$i}) {
+      grid-area: img#{$i};
+    }
+  }
+}
+
+// @for $i from 1 through 6 {
+//   .fade_down:nth-child(#{$i}) {
+//     animation-name: fade_down;
+//     animation-duration: 300ms;
+//     animation-timing-function: ease-in-out;
+//     animation-delay: $i * 100ms - 100ms;
+//     animation-fill-mode: forwards;
+//     animation-iteration-count: 1;
+//   }
+// }
+
+@include media-tablet-sm {
+  #about {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "des img1"
+      "img2 img3"
+      "img4 img5";
+  }
+}
+
+@include media-mobile-lg {
+  #about {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "des"
+      "img1"
+      "img2"
+      "img3"
+      "img4"
+      "img5";
+  }
+}
