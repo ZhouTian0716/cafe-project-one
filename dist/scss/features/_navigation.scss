@@ -1,0 +1,29 @@
+@use "../variables" as *;
+
+#logo {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  
+  nav {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: getColor(bg-contrast);
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+  }
+}
