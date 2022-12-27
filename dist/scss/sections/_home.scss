@@ -1,6 +1,6 @@
 @use "../variables" as *;
 
-#home {
+.home {
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -11,15 +11,33 @@
   background-color: getColor(bg-contrast);
   background-blend-mode: multiply;
   // filter: contrast(75%);
-  
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
+
+  .section__title {
+    padding: 7vw 9vw;
+    background-image: url("../assets/img/brush.png");
+    background-size: cover;
+    background-position: center;
+    font-size: clamp(28px, 4vw, 42rem);
+    color: getColor(text-primary-300);
+    font-family: getFont(hand-b);
+
+    &::before {
+      content: "Welcome";
+    }
+    &::after {
+      display: block;
+      color: getColor(text-secondary-700);
+      content: "Openning Soon";
+      font-family: getFont(hand-a);
+      font-size: clamp(16px, 2vw, 22px);
+    }
+  }
   h1 {
-    
     // mix-blend-mode:screen;
     // mix-blend-mode: difference;
     font-family: getFont(a);
