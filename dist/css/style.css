@@ -395,11 +395,10 @@ button:focus, button:active {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  overflow: hidden;
 }
 .menu__gallery__track {
   display: flex;
-  gap: 2vmin;
+  gap: 1vmin;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;

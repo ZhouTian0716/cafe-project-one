@@ -8,7 +8,10 @@ const handleOnUp = () => {
 };
 
 const handleOnMove = (e) => {
+  //   if (e.target !== track) return;
+  //
   if (track.dataset.mouseDownAt === "0") return;
+
   const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX;
   //   const maxDelta = window.innerWidth / 2;
   const maxDelta = window.innerWidth;
@@ -16,9 +19,10 @@ const handleOnMove = (e) => {
   const percentage = moveSpeed * (mouseDelta / maxDelta) * -100;
   const nextPercentageUnconstrained =
     parseFloat(track.dataset.prevPercentage) + percentage;
+
   const nextPercentage = Math.max(
     Math.min(nextPercentageUnconstrained, 5),
-    -100
+    -60
   );
 
   track.dataset.percentage = nextPercentage;
@@ -41,14 +45,14 @@ const handleOnMove = (e) => {
 
 /* -- Touch events for mobile-- */
 
-track.onmousedown = (e) => handleOnDown(e);
+window.onmousedown = (e) => handleOnDown(e);
 
-track.ontouchstart = (e) => handleOnDown(e.touches[0]);
+window.ontouchstart = (e) => handleOnDown(e.touches[0]);
 
-track.onmouseup = (e) => handleOnUp(e);
+window.onmouseup = (e) => handleOnUp(e);
 
-track.ontouchend = (e) => handleOnUp(e.touches[0]);
+window.ontouchend = (e) => handleOnUp(e.touches[0]);
 
-track.onmousemove = (e) => handleOnMove(e);
+window.onmousemove = (e) => handleOnMove(e);
 
-track.ontouchmove = (e) => handleOnMove(e.touches[0]);
+window.ontouchmove = (e) => handleOnMove(e.touches[0]);
