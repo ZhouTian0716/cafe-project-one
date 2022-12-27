@@ -10,9 +10,8 @@
   *::before,
   *::after {
     box-sizing: inherit;
+    text-transform: initial;
   }
-  
-  
   
   a {
     color: inherit;

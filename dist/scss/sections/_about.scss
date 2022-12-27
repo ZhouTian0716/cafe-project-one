@@ -9,6 +9,11 @@
     "des des des des des des img1 img1 img1 img2 img2 img2"
     "img3 img3 img3 img3 img4 img4 img4 img4 img5 img5 img5 img5";
   gap: 2rem;
+  .section__title {
+    &::before {
+      content: "Based in Sydney";
+    }
+  }
   .description {
     grid-area: des;
     display: flex;
