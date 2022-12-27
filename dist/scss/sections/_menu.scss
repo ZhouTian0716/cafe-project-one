@@ -21,19 +21,34 @@
   flex-direction: column;
   gap: 2rem;
   // overflow: hidden;
+  --spacer: 1rem;
+
+  .snaps-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: var(--spacer, 1rem);
+    > * {
+      scroll-snap-align: start;
+    }
+  }
   &__gallery__track {
-    display: flex;
-    gap: 1vmin;
-    
-    user-select: none;
-    transform: translateX(0%);
-    
+    display: grid;
+    gap: var(--spacer, 1rem);
+    margin: var(--spacer, 1rem);
+    padding: var(--spacer, 1rem) 0;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
     .menu__image {
       width: clamp(100px, 12vw, 180px);
-      // width: 40vmin;
+      border-radius: 5px;
       aspect-ratio: 0.8;
       object-fit: cover;
-      object-position: 100% center;
+      object-position: 0% center;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
   &__content {

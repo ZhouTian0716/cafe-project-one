@@ -395,23 +395,38 @@ button:focus, button:active {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  --spacer: 1rem;
+}
+.menu .snaps-inline {
+  -ms-scroll-snap-type: inline mandatory;
+      scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(--spacer, 1rem);
+}
+.menu .snaps-inline > * {
+  scroll-snap-align: start;
 }
 .menu__gallery__track {
-  display: flex;
-  gap: 1vmin;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  transform: translateX(0%);
+  display: grid;
+  gap: var(--spacer, 1rem);
+  margin: var(--spacer, 1rem);
+  padding: var(--spacer, 1rem) 0;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
 }
 .menu__gallery__track .menu__image {
   width: clamp(100px, 12vw, 180px);
+  border-radius: 5px;
   aspect-ratio: 0.8;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 100% center;
-     object-position: 100% center;
+  -o-object-position: 0% center;
+     object-position: 0% center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.menu__gallery__track .menu__image:hover {
+  transform: scale(1.05);
 }
 .menu__content {
   display: grid;
