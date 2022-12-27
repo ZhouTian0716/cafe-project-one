@@ -387,13 +387,39 @@ button:focus, button:active {
   background-image: url("../assets/img/menu-bg-light.png");
 }
 
-#menu {
+.menu {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
-  padding: 80px min(20px, 1vw);
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: hidden;
 }
-#menu .menu__wave_top {
+.menu__gallery__track {
+  display: flex;
+  gap: 2vmin;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transform: translateX(0%);
+}
+.menu__gallery__track .menu__image {
+  width: clamp(100px, 12vw, 180px);
+  aspect-ratio: 0.8;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% center;
+     object-position: 100% center;
+}
+.menu__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+.menu__wave_top {
   position: absolute;
   top: 0;
   left: 0;
@@ -401,16 +427,16 @@ button:focus, button:active {
   overflow: hidden;
   line-height: 0;
 }
-#menu .menu__wave_top svg {
+.menu__wave_top svg {
   position: relative;
   display: block;
   width: calc(122% + 1.3px);
   height: 45px;
 }
-#menu .menu__wave_top svg .shape-fill {
+.menu__wave_top svg .shape-fill {
   fill: var(--color-bg-primary-50);
 }
-#menu .menu__wave_bottom {
+.menu .menu__wave_bottom {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -419,13 +445,13 @@ button:focus, button:active {
   line-height: 0;
   transform: rotate(180deg);
 }
-#menu .menu__wave_bottom svg {
+.menu .menu__wave_bottom svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
   height: 50px;
 }
-#menu .menu__wave_bottom svg .shape-fill {
+.menu .menu__wave_bottom svg .shape-fill {
   fill: var(--color-bg-primary-50);
 }
 

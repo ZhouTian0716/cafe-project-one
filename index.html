@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     ></script>
     <script defer src="dist/js/themeToggle.js"></script>
+    <script defer src="dist/js/gallerySlider.js"></script>
     <script defer src="dist/js/main.js"></script>
     <title>Restaurant</title>
   </head>
@@ -70,15 +71,10 @@
         <div class="description">
           <h2>about section</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            dignissimos voluptates nulla ea sunt a ipsum voluptas fuga deserunt
-            cupiditate sint incidunt, iste est culpa quae natus exercitationem
-            quibusdam? Aspernatur?
+            our head chef han and his team brings in passion and love of food to bare witness. with extensive experience across hatted fine dining restaurants and prestigious hotels, Han extends his skills to his team and brings ideas and dishes to the everyday cafe-goers of rhodes. taking freshest seasonal produce, capturing the best flavour and translating in Bare Witness' unique style is the ethos of his dishes.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit nisi
-            natus, quod rerum deserunt veritatis. Commodi, expedita. Deserunt,
-            maiores natus!
+            we're excited to treat you to our deliciously curated dishes, highlighting the best of fresh seasonal produce. all you need to do is sit back, enjoy the beautiful waterview and indulge in the food.
           </p>
           <p class="description__link">About Us</p>
         </div>
@@ -88,7 +84,7 @@
         <div class="about__img horizontal"></div>
         <div class="about__img horizontal"></div>
       </section>
-      <section id="menu">
+      <section id="menu" class="menu">
         <div class="menu__wave_top">
           <svg
             data-name="Layer 1"
@@ -102,7 +98,87 @@
             ></path>
           </svg>
         </div>
-        <table></table>
+        <div class="menu__gallery__track" id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+          <img class="menu__image" src="./dist/assets/img/menu/1.jpeg" alt="1" draggable="false"/>
+          <img class="menu__image" src="./dist/assets/img/menu/2.jpeg" alt="2" draggable="false"/>
+          <img class="menu__image" src="./dist/assets/img/menu/3.jpeg" alt="3" draggable="false"/>
+          <img class="menu__image" src="./dist/assets/img/menu/4.jpeg" alt="4" draggable="false"/>
+          <img class="menu__image" src="./dist/assets/img/menu/5.jpeg" alt="5" draggable="false"/>
+          <img class="menu__image" src="./dist/assets/img/menu/6.jpeg" alt="6" draggable="false"/>
+          <img class="menu__image" src="./dist/assets/img/menu/7.jpeg" alt="7" draggable="false"/>
+          <img class="menu__image" src="./dist/assets/img/menu/8.jpeg" alt="8" draggable="false"/>
+          <img class="menu__image" src="./dist/assets/img/menu/9.jpeg" alt="9" draggable="false"/>
+          <img class="menu__image" src="./dist/assets/img/menu/10.jpeg" alt="10" draggable="false"/>
+          <img class="menu__image" src="./dist/assets/img/menu/11.jpeg" alt="11" draggable="false"/>
+        </div>
+        <div class="menu__content">
+          <div>
+            <img src="./dist/assets/img/menu/1.jpg" alt="1" /><img
+              src="./dist/assets/img/menu/1.jpg"
+              alt="1"
+            /><img src="./dist/assets/img/menu/1.jpg" alt="1" />
+          </div>
+          <h1>first</h1>
+          <table>
+            <caption>
+              My Daily Schedule
+            </caption>
+            <thead>
+              <tr>
+                <th>&nbsp;</th>
+                <th scope="col">Time</th>
+                <th scope="col">Activity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Morning</th>
+                <td>
+                  <time datetime="08:00">8am</time>-<time datetime="11:00"
+                    >11am</time
+                  >
+                </td>
+                <td>Write Code</td>
+              </tr>
+              <tr>
+                <th scope="row">Break</th>
+                <td>
+                  <time datetime="11:00">11am</time>-<time datetime="12:00"
+                    >12pm</time
+                  >
+                </td>
+                <td>Eat Lunch</td>
+              </tr>
+              <tr>
+                <th scope="row">Afternoon</th>
+                <td>
+                  <time datetime="12:00">12pm</time>-<time datetime="17:00"
+                    >5pm</time
+                  >
+                </td>
+                <td>Study for Other Courses</td>
+              </tr>
+              <tr>
+                <th scope="row">Evening</th>
+                <td rowspan="2">All Other Times</td>
+                <td>Free Time</td>
+              </tr>
+              <tr>
+                <th scope="row">Night</th>
+                <td>Sleep</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">
+                  And that's what I do every day, 5 days a week. Just eat,
+                  sleep, code ..and recharge!
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
         <div class="menu__wave_bottom">
           <svg
             data-name="Layer 1"
