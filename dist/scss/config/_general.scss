@@ -31,6 +31,14 @@ body{
   main{
     section{
       margin-bottom: 3rem;
+      p{
+        color: getColor(text-secondary-700);
+        text-indent: 2em;
+        text-align: justify;
+      }
     }
+    // section:nth-child(even){
+    //   background-color: getColor(bg-primary-300);
+    // }
   }
 }

@@ -1,0 +1,44 @@
+@use "../variables" as *;
+
+.reservation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @include media-tablet-sm {
+    grid-template-columns: 1fr;
+  }
+  gap: 2rem;
+  position: relative;
+  padding: 0 3vw 60px;
+  .section__form {
+    display: flex;
+    flex-direction: column;
+    gap:0.5em;
+    legend{
+        text-align: center;
+        font-weight: bold;
+    }
+    div {
+      display: flex;
+      gap:0.5em;
+      flex-direction: column;
+      input{
+        padding:0.5em;
+      }
+    }
+    button{
+        align-self: flex-start;
+    }
+  }
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    gap: 1rem;
+    button{
+        align-self: start;
+    }
+  }
+  
+}

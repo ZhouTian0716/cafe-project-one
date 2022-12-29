@@ -1,0 +1,17 @@
+@use "../variables" as *;
+
+
+.order__item{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    
+    justify-content: space-between;
+
+    img{
+        width: 100px;
+        aspect-ratio: 1;
+        border-radius: 10px;
+        object-fit:cover;
+    }
+}

@@ -1,6 +1,6 @@
 @use "../variables" as *;
 
-#about {
+.about {
   width: 100%;
   padding: 1rem;
   display: grid;
@@ -17,15 +17,21 @@
   .description {
     grid-area: des;
     display: flex;
+    gap: 1rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    // p {
+    //   color: getColor(text-secondary-700);
+    //   text-indent: 2em;
+    //   text-align: justify;
+    // }
   }
   @for $i from 1 through 5 {
-    .about__img:nth-child(#{$i + 1}) {
-      height: 400px;
+    &__img:nth-child(#{$i + 1}) {
+      height: 350px;
       background-size: cover;
-
+      border-radius: 10px;
       background-image: url("../assets/img/food/#{$i}.jpeg");
       grid-area: img#{$i};
       &.horizontal {
@@ -37,12 +43,17 @@
         // mask-image:linear-gradient(getColor(bg-contrast),transparent);
       }
     }
+    &__img:nth-child(2) {
+      border-radius: 10px 100px 100px 10px;
+    }
+    &__img:nth-child(3) {
+      border-radius: 100px 10px 10px 100px;
+    }
   }
 }
 
-
 @include media-tablet-lg {
-  #about {
+  .about {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "des img1"
@@ -52,7 +63,7 @@
 }
 
 @include media-mobile-lg {
-  #about {
+  .about {
     grid-template-columns: 1fr;
     grid-template-areas:
       "des"

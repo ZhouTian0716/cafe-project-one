@@ -17,7 +17,6 @@
     <title>Restaurant</title>
   </head>
   <body>
-    
     <header class="navigation">
       <nav>
         <!-- <img id="logo" src="./dist/assets/img/logo.png" alt="logo" /> -->
@@ -71,7 +70,7 @@
 
         <a class="btn__one" href="#contact">Start Ordering</a>
       </section>
-      <section id="about">
+      <section id="about" class="about">
         <div class="description">
           <h2 class="section__title">about us</h2>
           <p>
@@ -88,7 +87,7 @@
             highlighting the best of fresh seasonal produce. all you need to do
             is sit back, enjoy the beautiful waterview and indulge in the food.
           </p>
-          <p class="description__link">About Us</p>
+          <span class="btn__one">About Us</span>
         </div>
         <div class="about__img"></div>
         <div class="about__img"></div>
@@ -454,10 +453,80 @@
         </div>
       </section>
       <section id="reservation" class="reservation">
-        <h2 class="section__title">Reservation</h2>
+        <div class="reservation__message">
+          <h2 class="section__title">Reservation</h2>
+          <p>
+            Book your table with us and skip the queue when you come in -
+            available for groups up to 10 people, only on weekdays.
+          </p>
+          <p>
+            For bigger groups on weekdays, please call us on 0414 044 001 and
+            we'll be able to assist you.
+          </p>
+          <button class="btn__one">Call us</button>
+        </div>
+        <form class="section__form">
+          <legend class="reservation__legend">Reservation Form</legend>
+          <div>
+            <label class="label" for="name">Name</label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div>
+            <label class="label" for="phone">Phone</label>
+            <input type="text" name="phone" id="phone" />
+          </div>
+          <div>
+            <label class="label" for="guest">Guests</label>
+            <input type="number" name="guest" id="guest" />
+          </div>
+          <div>
+            <label class="label" for="time">Date</label>
+            <input type="date" name="time" id="time" />
+            <input type="time" name="time" id="time" />
+          </div>
+          <button type="submit" class="btn__one">Submit</button>
+        </form>
       </section>
-      <section id="delivery" class="delivery">
-        <h2 class="section__title">Delivery</h2>
+      <section id="delivery" class="reservation">
+        <div class="reservation__message">
+          <h2 class="section__title">Order Preview</h2>
+          <!-- <p>Check Your current ordering details</p> -->
+          <div class="order__item">
+            <img src="./dist/assets/img/menu/portrait/3.jpg" alt="3" /><span
+              class="order__item__name"
+              >king prawn pasta</span
+            ><span class="order__item__price">$34</span>
+          </div>
+          <div class="order__item">
+            <img src="./dist/assets/img/menu/portrait/2.jpg" alt="2" /><span
+              class="order__item__name"
+              >tasmanian salmon soba</span
+            ><span class="order__item__price">$26</span>
+          </div>
+
+          <button class="btn__one">Add</button>
+        </div>
+        <form class="section__form">
+          <legend class="reservation__legend">Order Form</legend>
+          <div>
+            <label class="label" for="name">Name</label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div>
+            <label class="label" for="name">Table Number</label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div>
+            <label class="label" for="phone">Address</label>
+            <input type="text" name="phone" id="phone" />
+          </div>
+          <div>
+            <label class="label" for="guest">Coupon</label>
+            <input type="text" name="phone" id="phone" />
+          </div>
+
+          <button type="submit" class="btn__one">Submit</button>
+        </form>
       </section>
     </main>
     <footer>
