@@ -91,7 +91,7 @@
             padding: 0.5em;
             position: relative;
             &::before {
-              content: "➕";
+              content: attr(data-content);
               font-size: 12px;
               position: absolute;
               top: 50%;
@@ -179,6 +179,9 @@
     &__content {
       grid-template-columns: 1fr;
       grid-template-areas: "Entrees" "Mains" "non-alcoh" "alcoh";
+      table {
+        padding:0 1em;
+      }
     }
   }
 }
