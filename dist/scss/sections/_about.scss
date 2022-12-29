@@ -33,7 +33,8 @@
         background-size: contain;
         background-position: bottom;
         background-attachment: fixed;
-        
+        // -webkit-mask-image:linear-gradient(getColor(bg-contrast),transparent);
+        // mask-image:linear-gradient(getColor(bg-contrast),transparent);
       }
     }
   }

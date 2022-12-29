@@ -1,4 +1,4 @@
-const navigation = document.querySelector('#navigation');
+const navigation = document.querySelector('.navigation');
 let lastScroll = 0;
 
 window.addEventListener("scroll", () => {
